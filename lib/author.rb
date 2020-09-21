@@ -1,11 +1,11 @@
 class Author
   
-  attr_accessor :name
+  attr_accessor :title
   
   @@all = []
   
-  def initialize(name)
-    @name = name
+  def initialize(title)
+    @title = title
     @@all << self
   end
   
@@ -21,8 +21,8 @@ class Author
     post.author = self
   end
   
-  def add_post_by_name(name)
-    post = Post.new(name)
+  def add_post_by_name(title)
+    post = Post.new(title)
     post.artist = self
   end
   
